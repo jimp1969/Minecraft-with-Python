@@ -62,11 +62,14 @@ class Voxel(Button):
                 if block_pick == 5: voxel = Voxel(position = self.position + mouse.normal, texture = wood_texture)
 
             
-            if key == "right mouse down":
+            elif key == "right mouse down":
                 punch_sound.play()
                 destroy(self)
+            else key == 'escape:
+                quit()
             
-            if key == 'm' or key == 'n':
+            
+            elif key == 'm' or key == 'n':
                 epee_sound.play()
                 magique()
             print(key)
@@ -107,6 +110,10 @@ for z in range(20):
 
 def magique():
     pass
+
+
+
+
 player = FirstPersonController()
 sky = Sky()
 hand = Hand()
